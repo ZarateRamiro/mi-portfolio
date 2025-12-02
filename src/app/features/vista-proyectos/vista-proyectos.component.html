@@ -1,1 +1,40 @@
-<p>vista-proyectos works!</p>
+<div class="container py-5" style="background-color: #f5f6fa; min-height: 100vh;">
+  <h2 class="text-center mb-5 text-primary fw-bold">
+    <i class="bi bi-folder2-open me-2"></i> Mis Proyectos
+  </h2>
+
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let proyecto of vistaProyectos">
+      <div class="card shadow-sm h-100 border-0">
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">
+            <i class="bi bi-code-slash me-2"></i>{{ proyecto.proyecto }}
+          </h5>
+
+          <p class="mb-2"><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p>
+          <p class="mb-2"><strong>Asignatura:</strong> {{ proyecto.asignatura }}</p>
+          <p class="mb-3"><strong>Docente:</strong> {{ proyecto.docente }}</p>
+
+          <a
+            *ngIf="proyecto.linkRepositorio"
+            [href]="proyecto.linkRepositorio"
+            target="_blank"
+            class="btn btn-outline-primary btn-sm w-100"
+          >
+            <i class="bi bi-github me-1"></i> Ver Repositorio
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading y error -->
+  <div *ngIf="cargando" class="text-center mt-4">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p class="mt-2">Cargando proyectos...</p>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger mt-4 text-center">
+    {{ error }}
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-    <a class="navbar-brand" routerLink="/">Mi App</a>
+    <a class="navbar-brand" routerLink="/">MI PORFOLIO</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
       <span class="navbar-toggler-icon"></span>
@@ -11,22 +11,15 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Inicio</a>
+         <a class="nav-link" [routerLink]="['/inicio']">Inicio</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/vista" routerLinkActive="active">Vista (activo)</a>
+          <a class="nav-link" [routerLink]="['/datos']">Datos Personales</a>
         </li>
-
-        
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista" routerLinkActive="active">Lista</a>
+            <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/proyectos']">Proyectos</a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/datos']">Vista</a>
-        </li>
-    
     
 
       </ul>
@@ -35,6 +28,6 @@
 </nav>
 
 
-<p>&#64;<i class="fa fa-copyright" aria-hidden="true"></i></p>
+
 
   </div>

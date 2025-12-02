@@ -1,7 +1,47 @@
-<p>lista-estudiantes works!</p>
+<div class="container my-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="row g-0 align-items-center">
+      <!-- Foto de perfil -->
+      <div class="col-md-4 text-center p-4">
+        <img 
+          [src]="datosPersonales.foto" 
+          alt="Foto de {{datosPersonales.nombre}}" 
+          class="img-fluid rounded-circle shadow-sm" 
+          style="width: 180px; height: 180px; object-fit: cover;"
+        >
+      </div>
 
-<ul>
-   <p>datos personales: </p>
-        <li>{{datosPersonales.nombre}} {{datosPersonales.titulo}} {{datosPersonales.email}}</li>
-    
-</ul>
+      <!-- Información personal -->
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title mb-2 fw-bold">{{ datosPersonales.nombre }}</h2>
+          <h5 class="text-primary mb-3">{{ datosPersonales.titulo }}</h5>
+          <p class="card-text text-muted mb-4">{{ datosPersonales.descripcion }}</p>
+
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <i class="bi bi-envelope-fill me-2 text-primary"></i>
+              {{ datosPersonales.email }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone-fill me-2 text-primary"></i>
+              {{ datosPersonales.telefono }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-github me-2 text-dark"></i>
+              <a [href]="datosPersonales.github" target="_blank" class="text-decoration-none text-dark">
+                {{ datosPersonales.github }}
+              </a>
+            </li>
+            <li>
+              <i class="bi bi-linkedin me-2 text-primary"></i>
+              <a [href]="datosPersonales.linkedin" target="_blank" class="text-decoration-none text-primary">
+                {{ datosPersonales.linkedin }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

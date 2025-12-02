@@ -1,0 +1,17 @@
+footer {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d6efd;
+  color: #555;
+}
+
+footer a:hover {
+  color: #0d6efd !important; /* azul Bootstrap */
+}
+
+footer .bi {
+  transition: transform 0.2s ease;
+}
+
+footer .bi:hover {
+  transform: scale(1.2);
+}
