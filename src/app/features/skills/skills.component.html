@@ -1,0 +1,26 @@
+<div class="container py-5">
+  <h2 class="text-center mb-4 fw-bold">SKILLS</h2>
+
+  <div class="row g-4">
+    <div class="col-md-3 col-sm-6" *ngFor="let skill of skills">
+      <div class="card shadow-sm border-0 h-100 text-center p-3">
+        
+        <!-- Icono (si más adelante agregás iconos reales) -->
+        <div class="mb-3">
+          <span class="display-5 text-primary">
+            {{ skill.icono ? skill.icono : '⚙️' }}
+          </span>
+        </div>
+
+        <h5 class="fw-bold">{{ skill.nombre }}</h5>
+
+        <span class="badge 
+          bg-primary-subtle text-primary 
+          py-2 px-3 mt-2">
+          {{ skill.nivel }}
+        </span>
+
+      </div>
+    </div>
+  </div>
+</div>
